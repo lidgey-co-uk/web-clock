@@ -15,7 +15,7 @@ variables:
   webAppName: 'web-clock'
 
   # Environment name
-  environmentName: ''
+  environmentName: 'env'
   
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
