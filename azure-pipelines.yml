@@ -44,7 +44,7 @@ stages:
         Contents: '**/target/*.?(pom|war|jar)'
         TargetFolder: $(Build.ArtifactStagingDirectory)
 
-    - upload: $(Build.ArtifactStagingDirectory)
+    - publish: $(Build.ArtifactStagingDirectory)
       artifact: drop
 
 - stage: Deploy
