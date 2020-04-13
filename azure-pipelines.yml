@@ -12,7 +12,7 @@ variables:
   azureSubscription: '148b7c2b-bb4d-4dcb-b4bd-63e0081b84d0'
   
   # Web app name
-  webAppName: ''
+  webAppName: 'web-clock'
 
   # Environment name
   environmentName: ''
