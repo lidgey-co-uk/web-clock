@@ -65,5 +65,5 @@ stages:
             inputs:
               azureSubscription: $(azureSubscription)
               appType: webAppLinux
-              appName: $(webAppName)
+              appName: 'web-clock-app'
               package: '$(Pipeline.Workspace)/drop/**/target/*.?(war|jar)'
