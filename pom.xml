@@ -1,0 +1,9 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+    <groupId>uk.co.lidgey</groupId>
+    <artifactId>web-clock</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <modules>
+        <module>web-clock-app</module>
+    </modules>
+</project>
