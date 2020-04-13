@@ -12,7 +12,7 @@ variables:
   azureSubscription: '148b7c2b-bb4d-4dcb-b4bd-63e0081b84d0'
   
   # Web app name
-  webAppName: 'web-clock'
+  webAppName: 'web-clock-app'
 
   # Environment name
   environmentName: 'env'
@@ -34,6 +34,7 @@ stages:
       displayName: 'Maven Package'
       inputs:
         mavenPomFile: 'pom.xml'
+        mavenAuthenticateFeed: true
         goals: 'clean install package'
 
     - task: CopyFiles@2
@@ -65,5 +66,5 @@ stages:
             inputs:
               azureSubscription: $(azureSubscription)
               appType: webAppLinux
-              appName: 'web-clock-app'
+              appName: $(webAppName)
               package: '$(Pipeline.Workspace)/drop/**/target/*.?(war|jar)'
