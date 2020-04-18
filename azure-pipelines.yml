@@ -1,4 +1,9 @@
 # Maven package Java project Web App to Linux on Azure
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'web-clock'
+    publishLocation: 'Container'
 # Build your Java project and deploy it to Azure as a Linux web app
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
@@ -45,7 +50,7 @@ stages:
         TargetFolder: $(Build.ArtifactStagingDirectory)
 
     - publish: $(Build.ArtifactStagingDirectory)
-      artifact: drop
+      artifact: web-clock
 
 - stage: Deploy
   displayName: Deploy stage
